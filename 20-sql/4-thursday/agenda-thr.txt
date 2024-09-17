@@ -1,0 +1,9 @@
+*** MORE SQL ***
+ON DELETE CASCADE
+Spicy SELECT
+JOINs 
+  - trees-and-leaves one-to-many example
+  - students-and-courses many-to-many example
+
+30 Min - Break out rooms to work on PA
+

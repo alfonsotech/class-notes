@@ -1,0 +1,20 @@
+Resources
+- SQLITE Cheat Sheet: https://d17h27t6h515a5.cloudfront.net/topher/2016/September/57ed880e_sql-sqlite-commands-cheat-sheet/sql-sqlite-commands-cheat-sheet.pdf
+- SQLite Data Types
+- Picture of a Relational DB Design Flow Chart:
+https://www3.ntu.edu.sg/home/ehchua/programming/sql/Relational_Database_Design.html
+
+
+Three ways to search for something indeterminate:
+SELECT * FROM table_name WHERE column_name LIKE '%search_term%';
+SELECT * FROM table_name WHERE column_name GLOB '*search_term*';
+SELECT * FROM table_name WHERE column_name MATCH 'search_term'; 
+
+
+Combining SQL and Express -- NOT YET COMPLETE
+1. Set up basic express server
+2. GET request for trees - stub
+3. GET request for a specific tree - stub
+4. POST a tree to trees - stub
+5. Connection to DB
+6. Write queries inside of stubs

@@ -1,0 +1,45 @@
+Clarification: app.js - parameter `next`
+
+Scenario: Library Management System
+Let's imagine we're designing a database for a library. We'll have tables for authors, books, book categories, library members, and library cards. Stretch Goal: book loans table.
+
+2. Identify columns and Primary Keys
+3. Establish table relationships
+4. LucidChart - Entity Relationships Diagram
+5. Write SQL schema
+6. Seed tables
+7. Write some queries
+
+
+
+
+
+
+
+
+
+
+2. Identify Primary Keys
+
+authors: id, name
+books: id, title, isbn
+categories: id, name
+members: id, name, email
+library_cards: id, card_number
+
+
+
+
+3. Establish table relationships
+One-to-One: Each member can have one library card, each library card belongs to excactly one member.
+
+One-to-Many: An author can write many books, but each book has only one author.
+
+Many-to-Many: Books can belong to multiple categories, and categories can contain multiple books. We'll use a join table for this relationship.
+
+
+
+4. Lucid Chart
+5. Write SQL schema
+6. Seed tables
+7. Write some queries
