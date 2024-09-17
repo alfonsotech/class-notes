@@ -1,0 +1,58 @@
+-flex-day-requests channel
+
+- .open practice.db
+
+- SQL Injections
+Anytime we take user input, there's a chance that user inputs a dangerous command.
+
+So, anytime we take user input, we must `sanitize` it to protect our data.
+
+How do we do that? We don't! We just use tools that do it for us.
+
+Additional resource to visualize SQL Injection: https://www.hacksplaining.com/lessons/sql-injection/start
+
+- Efficiency
+Question: When to use Subqueries, Joins, or Indexes. Seems like (maybe) there are 3 diff ways of doing same thing?
+
+Joins: when you need to combine data from multiple tables in a single result set.
+
+Subqueries: for complex filtering or calculations. Subqueries are useful for complex logic that can't be easily expressed with joins.
+
+Indexes: Used to improve query performance, especially for large tables, but don't change the actual query structure.
+
+
+Time Complexity: Big O Notation Review
+O(1) represents constant time complexity. This means that regardless of the input size, the operation always takes the same amount of time. It's the most efficient time complexity possible.
+
+0(n) is linear time
+
+O(log n) represents logarithmic time complexity. As the input size increases, the time taken by the algorithm grows, but at a much slower rate than linear growth. This is very efficient for large datasets.
+
+- N+1
+An N+1 query is where you execute one initial query to retrieve a set of results, and then for each of those results, you execute an additional query. This leads to N+1 total queries, where N is the number of results from the initial query.
+
+Inefficient:  N+1 queries are inefficient because they result in multiple round trips to the database. Each additional query adds overhead in terms of network latency and database processing time. As the number of results grows, the performance degradation becomes more pronounced, leading to slower response times and increased server load.
+
+- SQL Indexes
+A SQL index is a data structure that improves the speed of data retrieval operations on database tables. 
+- It acts like a lookup table, allowing the database engine to quickly locate rows with specific column values without scanning the entire table. 
+- But it increases the time it takes to both insert and delete a record.
+- Use when lookups will outnumber inserts and deletions. 
+- Don't use on small tables or frequently updated tables.
+
+Good index if cats are often looked up by name: 
+```sql 
+CREATE INDEX idx_cats_name ON cats(name);
+``` 
+Potentially unnecessary  if the 'color' column in the 'toys' table isn't frequently used in WHERE clauses or JOIN conditions: 
+```sql
+CREATE INDEX idx_toys_color ON toys(color);
+```
+Useful for joins where you want to look up something in cats table, like the name of a cat, as connected to cat_toys data: 
+```sql 
+CREATE INDEX idx_cat_toys_cat_id ON cat_toys(cat_id);
+```
+
+
+
+

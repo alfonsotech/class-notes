@@ -3,6 +3,7 @@
 ----------
 -- Query: Select all cats that have a toy with an id of 5
 
+
     -- Your code here 
 
 -- Paste your results below (as a comment):
