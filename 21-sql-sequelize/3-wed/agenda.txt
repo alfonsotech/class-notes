@@ -23,7 +23,10 @@ PRATICE: AA11-Express-Sequelize
 -up: do
 -down: undo
 
-
+Create Migrations:
 `npx sequelize-cli migration:generate --name <name of table>`
+
+Run Migrations:
+`npx dotenv sequelize db:migrate`
 
 ** Database Constraints
