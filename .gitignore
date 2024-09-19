@@ -1,4 +1,5 @@
 agenda-wed-solution.txt
+practice/
 long-practice/
 assessments/
 node-modules/
@@ -6,3 +7,4 @@ package-lock.json
 .DS_Store
 00-week-template/
 assessments/
+.vscode/
